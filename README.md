@@ -1,8 +1,10 @@
-# Build a model that identifies damaged parts from car photos and predicts the estimated repair cost based on damage severity and car model metadata
+# Build a model to identify damaged parts from car photos and predicts the estimated repair cost based on damage severity and car model metadata
 
 **Project work as part of IIT Delhi ML and DL course - Batch 7**
 
-Dataset : https://www.kaggle.com/datasets/nasimetemadi/car-damage-detection
+Dataset Used: 
+https://www.kaggle.com/datasets/nasimetemadi/car-damage-detection
+The dataset consists of labeled images of various car damage scenarios, intended to train machine learning models for automatic detection and assessment of car damage. Dataset includes a diverse range of car types and damage patterns, making it suitable for this scenario.
 
 Input - 
   Car Images - car photo
