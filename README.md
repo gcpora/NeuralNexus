@@ -1,14 +1,36 @@
-# Build a model to identify damaged parts from car photos and predicts the estimated repair cost based on damage severity and car model metadata
-
 **Project work as part of IIT Delhi ML and DL course - Batch 7**
 
-Dataset Used: 
-https://www.kaggle.com/datasets/nasimetemadi/car-damage-detection
+# Build a model to identify damaged parts from car photos and predicts the estimated repair cost based on damage severity and car model metadata
+
+**Dataset Used: **https://www.kaggle.com/datasets/nasimetemadi/car-damage-detection
+
 The dataset consists of labeled images of various car damage scenarios, intended to train machine learning models for automatic detection and assessment of car damage. Dataset includes a diverse range of car types and damage patterns, making it suitable for this scenario.
 
 Input - 
-  Car Images - car photo
-	Tabular data - Car model metadata
+  Car Images - 
+      COCO Directory - Coco is an annotation format. It pairs images with a JSON file describing:
+	  	1. What objects are in the image (categories: dent, scratch etc.)
+		2. Where they are (bounding boxes or polygon outlines)
+		3. Severity levels
+		In summary the hwlp is finding out "What is damaged and how bad?"
+	    COCO/
+			images/
+			      0001.jpg
+				  0002.jpg
+			annotations.json  <--- Annotation file tells us about the damage. Ex: dent is near the bumper.
+
+	  SOD Directory - SOD stands for Salient Object Detection. Instead of a JSON file, it gives us a binary mask per image - a black/white  
+	  image where white stands for damaged area while black stands for background. This is spatial guide. It answers "where in the image is 
+	  the damage?
+	      SOD/
+		      images/
+			         0001.jpg
+					 0002.jpg
+			  masks/
+			         0001.jpg
+					 0002.jpg
+	  
+  Tabular data - Car model metadata
 
 Output - Estimated repair cost
 
